@@ -51,7 +51,16 @@ public class MoodAnalyserTest {
 				e.printStackTrace();
 			}
 		}
-		
+	@Test
+	public void givenMessage_WhenEmpty_ShouldThrowsException() {
+			MoodAnalyser moodAnalyser = new MoodAnalyser("");
+			String mood=null;
+			try {
+				mood = moodAnalyser.analyseMood();
+			} catch (MoodAnalysisException e) {
+				e.printStackTrace();
+			}
+		}
 }
 
 

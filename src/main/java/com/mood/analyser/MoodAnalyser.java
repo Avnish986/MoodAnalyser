@@ -1,5 +1,7 @@
 package com.mood.analyser;
 
+import com.mood.analyser.MoodAnalysisException.ExceptionType;
+
 public class MoodAnalyser {
 	public String msg;
 	public MoodAnalyser()
@@ -12,6 +14,9 @@ public class MoodAnalyser {
 	}
 	public String analyseMood() throws MoodAnalysisException{
 		try {
+		if(msg.length()==0)
+			throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,"Please enter valid mood");
+			
 		if(msg.contains("Sad")) {
 			System.out.println("SAD");
 			return "SAD";
@@ -24,7 +29,7 @@ public class MoodAnalyser {
 		catch(NullPointerException e){
 			//System.out.println("NULL Exception thrown");
 			//return "HAPPY";
-			throw new MoodAnalysisException("Please enter valid mood");
+			throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL,"Please enter valid mood");
 		}
 		
 	}
