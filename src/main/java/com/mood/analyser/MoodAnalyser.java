@@ -23,8 +23,8 @@ public class MoodAnalyser {
 	}
 	public static void main(String[] args) {
 		System.out.println("Mood analyser");
-		MoodAnalyser moodAnalyse = new MoodAnalyser("I am Sad in mood");
-		System.out.println(moodAnalyse.analyseMood());
+		//MoodAnalyser moodAnalyse = new MoodAnalyser("I am Sad in mood");
+		//System.out.println(moodAnalyse.analyseMood());
 		
 	}
 }
